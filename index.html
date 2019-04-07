@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Producer-Consumer model</title>
+  <meta name="description" content="Producer-Consumer problem visualization">
+  <meta name="author" content="Ivan Velichko <iximiuz at gmail.com>">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <table>
+      <tr>
+        <td>Producing delay min</td>
+        <td><input id="prod-delay-min" type="number" min="200" step="100" class="form-control form-control-sm"></td>
+      </tr>
+
+      <tr>
+        <td>Producing delay max</td>
+        <td><input id="prod-delay-max" type="number" min="200" step="100" class="form-control form-control-sm"></td>
+      </tr>
+
+      <tr>
+        <td>Consuming delay min</td>
+        <td><input id="cons-delay-min" type="number" min="200" step="100" class="form-control form-control-sm"></td>
+      </tr>
+
+      <tr>
+        <td>Consuming delay max</td>
+        <td><input id="cons-delay-max" type="number" min="200" step="100" class="form-control form-control-sm"></td>
+      </tr>
+
+      <tr>
+        <td>Produce chunks</td>
+        <td><input id="chunks-count" type="number" min="1" class="form-control form-control-sm"></td>
+      </tr>
+
+      <tr>
+        <td>Queue capacity</td>
+        <td><input id="queue-cap" type="number" min="1" max="6" class="form-control form-control-sm"></td>
+      </tr>
+    </table>
+
+    <button id="options-apply" class="btn btn-primary">Apply</button> ...or use preset: <a href="javascript: void 0" id="preset-fpsc" class="btn-preset">Fast&rarr;Slow</a> / <a href="javascript: void 0" id="preset-spfc" class="btn-preset">Slow&rarr;Fast</a> / <a href="javascript: void 0" id="preset-random" class="btn-preset">Random</a>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="model.js"></script>
+  <script src="page.js"></script>
+</body>
+</html>
+

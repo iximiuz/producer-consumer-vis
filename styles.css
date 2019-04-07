@@ -8,12 +8,16 @@ body {
   cursor: pointer;
 }
 
+#canvas-container {
+  text-align: center;
+}
+
 #options-apply {
   margin-left: 0;
 }
 
 .container {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 .btn {

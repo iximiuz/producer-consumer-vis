@@ -49,6 +49,13 @@
 
   start(fpscOptions);
 
+  if (window.location.search.indexOf('msrc=article') === -1) {
+    var articleLink = document.getElementById('article');
+    if (articleLink) {
+      articleLink.style.display = 'block';
+    }
+  }
+
   // ---=== Utils ===---
   function start(options) {
     if (model && model.isRunning()) {
@@ -65,10 +72,12 @@
   }
 
   function recreateCanvas() {
-    document.body.removeChild(document.getElementById(canvasId))
+    var container = document.getElementById('canvas-container');
+    container.removeChild(document.getElementById(canvasId))
+
     var canvas = document.createElement('canvas');
     canvas.id = canvasId;
-    document.body.appendChild(canvas);
+    container.appendChild(canvas);
 
     onClick(canvasId, function() {
       if (model.isRunning()) {

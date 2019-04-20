@@ -49,13 +49,6 @@
 
   start(fpscOptions);
 
-  if (window.location.search.indexOf('msrc=article') === -1) {
-    var articleLink = document.getElementById('article');
-    if (articleLink) {
-      articleLink.style.display = 'block';
-    }
-  }
-
   // ---=== Utils ===---
   function start(options) {
     if (model && model.isRunning()) {
